@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Comunitario CETIS 29 | Alimentos Saludables Chimalpa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .text-emerald-custom {
+            color: #047857; 
+        }
+        .bg-emerald-custom {
+            background-color: #047857;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <nav class="sticky top-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-extrabold text-emerald-custom tracking-tight">Taller Programacion 5-D | CETIS 29</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-emerald-custom font-medium transition duration-300">Inicio</a>
+                    <a href="#mision" class="text-gray-600 hover:text-emerald-custom font-medium transition duration-300">Nuestra Misión</a>
+                    <a href="#programa" class="text-gray-600 hover:text-emerald-custom font-medium transition duration-300">Programa</a>
+                    <a href="#beneficios" class="text-gray-600 hover:text-emerald-custom font-medium transition duration-300">Beneficios</a>
+                    <a href="#contacto" class="text-gray-600 hover:text-emerald-custom font-medium transition duration-300">Contacto</a>
+                </div>
+                <button id="menu-button" class="md:hidden p-2 rounded-md text-gray-500 hover:text-emerald-custom focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-custom transition duration-150">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-xl">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-emerald-100 transition duration-150">Inicio</a>
+                <a href="#mision" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-emerald-100 transition duration-150">Nuestra Misión</a>
+                <a href="#programa" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-emerald-100 transition duration-150">Programa</a>
+                <a href="#beneficios" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-emerald-100 transition duration-150">Beneficios</a>
+                <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-emerald-100 transition duration-150">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="relative bg-emerald-custom overflow-hidden pt-16 sm:pt-24 lg:pt-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 md:py-24">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+                    <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-7xl">
+                        <span class="block">TALLER DE ALIMENTOS SALUDABLES</span>
+                        <span class="block text-emerald-200">¡Transforma tu Comunidad!</span>
+                    </h1>
+                    <p class="mt-3 text-base text-emerald-200 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                        Capacitación comunitaria intensiva para la elaboración sostenible de productos alimenticios procesados saludables. Este programa de vinculación, impulsado por el CETIS 29, busca el control efectivo y la prevención de las enfermedades metabólicas crónicas que afectan a las familias de San Pablo Chimalpa, promoviendo la autosuficiencia alimentaria y económica.
+                    </p>
+                    <div class="mt-8 sm:mt-10 sm:flex sm:justify-center lg:justify-start">
+                        <div class="rounded-lg shadow-md">
+                            <button onclick="openModal('registerModal')" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xl text-emerald-custom bg-white hover:bg-gray-100 md:py-4 md:text-lg md:px-10 transition duration-300 transform hover:scale-[1.02]">
+                                ¡Inscríbete Ahora!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 lg:mt-0 lg:col-span-6 flex justify-center items-center">
+                    <div class="w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl transform hover:scale-[1.01] transition duration-500">
+                        <img 
+                            src="instalaciones.jpg" 
+                            alt="Vista profesional de las instalaciones del laboratorio de procesamiento de alimentos del CETIS 29, limpias y equipadas." 
+                            class="w-full h-auto object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg class="absolute bottom-0 left-0 w-full h-auto text-white fill-current" viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,60 C240,10 480,10 720,60 C960,110 1200,110 1440,60 L1440,100 L0,100 L0,60 Z" />
+        </svg>
+    </header>
+
+    <section id="mision" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-base text-emerald-custom font-semibold tracking-wide uppercase">NUESTRO OBJETIVO</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Una Visión de Salud para San Pablo Chimalpa
+                </p>
+            </div>
+
+            <div class="mt-10 grid grid-cols-1 gap-10 md:grid-cols-3">
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 border-t-4 border-emerald-custom">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Técnicas de Procesamiento Innovadoras</h3>
+                    <p class="text-gray-600">
+                        Enseñamos métodos avanzados de conservación y procesamiento de alimentos, priorizando ingredientes locales y técnicas ancestrales modernizadas. Nuestro objetivo es minimizar drásticamente el uso de azúcares refinados, sodio y grasas saturadas, generando productos con alto valor nutricional y económico. Esta capacitación es clave para transformar la oferta alimentaria local.
+                    </p>
+                    <div class="mt-4 text-emerald-custom font-semibold">
+                        <svg class="w-6 h-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.275a1.988 1.988 0 010 2.83L11.83 18.618a1.988 1.988 0 01-2.83 0l-4.275-4.275a1.988 1.988 0 010-2.83l.83-.83A1.988 1.988 0 017 6.17c.65.65 1.488 1 2.33 1s1.68-.35 2.33-1l.83-.83c.77-.77 2.03-.77 2.8 0z" /></svg>
+                        Mermeladas sin azúcar ni conservadores artificiales, deshidratación de frutas y vegetales encurtidos con bajo contenido de sodio.
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 border-t-4 border-emerald-custom">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Enfoque en Enfermedades Crónicas</h3>
+                    <p class="text-gray-600">
+                        Dado el alto índice de enfermedades crónicas en la región, el taller se enfoca rigurosamente en la prevención y control dietético de padecimientos como la Diabetes tipo 2, Hipertensión arterial y Dislipidemias. Proporcionamos a los participantes no solo recetas, sino un entendimiento profundo de la interacción alimento-metabolismo, creando guías alimentarias específicas y personalizables para el entorno familiar.
+                    </p>
+                    <div class="mt-4 text-emerald-custom font-semibold">
+                        <svg class="w-6 h-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                        Medición de impacto en la salud comunitaria a través de indicadores de riesgo metabólico.
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 border-t-4 border-emerald-custom">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Respaldo Académico y Social</h3>
+                    <p class="text-gray-600">
+                        El programa es una iniciativa de servicio social y vinculación, impartido directamente por personal docente y estudiantes avanzados del CETIS 29, especializados en la tecnología de alimentos. Esto garantiza un contenido de alta calidad, basado en la ciencia moderna, la inocuidad alimentaria y la adaptación práctica a los recursos y desafíos específicos de San Pablo Chimalpa.
+                    </p>
+                    <div class="mt-4 text-emerald-custom font-semibold">
+                        <svg class="w-6 h-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                        Apoyo continuo del personal docente, acceso a laboratorios especializados y materiales didácticos exclusivos.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programa" class="py-16 md:py-24 bg-emerald-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-base text-emerald-custom font-semibold tracking-wide uppercase">ESTRUCTURA Y CONTENIDO</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Módulos Clave de la Capacitación
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="rounded-xl shadow-lg overflow-hidden border border-emerald-200">
+                    <button class="accordion-header flex justify-between items-center w-full p-6 text-left bg-white hover:bg-emerald-100 transition duration-300 focus:outline-none" data-target="modulo1">
+                        <span class="text-xl font-semibold text-gray-900">Módulo I: Fundamentos de Nutrición Aplicada</span>
+                        <svg class="w-6 h-6 text-emerald-custom transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div id="modulo1" class="accordion-content hidden p-6 bg-emerald-50">
+                        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                            <li>El Plato del Bien Comer y su adaptación a la canasta básica y productos disponibles en la región de Cuajimalpa.</li>
+                            <li>Conceptos de macro y micronutrientes esenciales: El rol de la fibra, vitaminas y minerales en la salud metabólica.</li>
+                            <li>Diferencia crítica entre alimentos procesados, mínimamente procesados y ultraprocesados (identificación de aditivos nocivos).</li>
+                            <li>Cálculo básico de requerimientos calóricos y proteicos para el control de peso y grupos con requerimientos especiales (niños, adultos mayores).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rounded-xl shadow-lg overflow-hidden border border-emerald-200">
+                    <button class="accordion-header flex justify-between items-center w-full p-6 text-left bg-white hover:bg-emerald-100 transition duration-300 focus:outline-none" data-target="modulo2">
+                        <span class="text-xl font-semibold text-gray-900">Módulo II: Tecnología de Alimentos Saludable</span>
+                        <svg class="w-6 h-6 text-emerald-custom transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div id="modulo2" class="accordion-content hidden p-6 bg-emerald-50">
+                        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                            <li>Desarrollo de conservas, jaleas y mermeladas utilizando sustitutos naturales de azúcar como estevia y monk fruit.</li>
+                            <li>Técnicas culinarias para el bajo contenido de sodio: uso estratégico de hierbas de olor, especias mexicanas y ácidos naturales.</li>
+                            <li>Elaboración artesanal de lácteos fermentados (kéfir, yogures) y su importancia como fuente de probióticos para la salud intestinal.</li>
+                            <li>Implementación de Buenas Prácticas de Manufactura (BPM) y control de calidad e inocuidad alimentaria, esenciales para la comercialización.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="rounded-xl shadow-lg overflow-hidden border border-emerald-200">
+                    <button class="accordion-header flex justify-between items-center w-full p-6 text-left bg-white hover:bg-emerald-100 transition duration-300 focus:outline-none" data-target="modulo3">
+                        <span class="text-xl font-semibold text-gray-900">Módulo III: Prevención y Control de Metropatías</span>
+                        <svg class="w-6 h-6 text-emerald-custom transform transition-transform duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                    <div id="modulo3" class="accordion-content hidden p-6 bg-emerald-50">
+                        <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                            <li>Elaboración de dietas de bajo índice glucémico y control de porciones para la gestión efectiva de la Diabetes tipo 2.</li>
+                            <li>Diseño y formulación de alimentos funcionales (ej. barras energéticas ricas en fibra, botanas saludables) destinados a reducir la presión arterial y el colesterol.</li>
+                            <li>Técnicas sencillas de monitoreo de indicadores de riesgo metabólico (circunferencia de cintura, uso de glucómetros) para la prevención familiar.</li>
+                            <li>Interpretación detallada del nuevo etiquetado nutricional frontal de advertencia (octógonos negros) y toma de decisiones informada.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="beneficios" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+                <div class="mt-10 lg:mt-0">
+                    <div class="w-full rounded-3xl overflow-hidden shadow-2xl">
+                        <img 
+                            src="alumnos.jpg" 
+                            alt="Estudiantes comunitarios y personal del CETIS 29 preparando alimentos saludables en el laboratorio." 
+                            class="w-full h-auto object-cover">
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-base text-emerald-custom font-semibold tracking-wide uppercase">EL IMPACTO DE TU PARTICIPACIÓN</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        ¿Qué Ganarás al Unirte al Taller?
+                    </p>
+                    <ul class="mt-6 space-y-4 text-lg text-gray-600">
+                        <li class="flex items-start">
+                            <svg class="flex-shrink-0 h-6 w-6 text-emerald-custom mt-1 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span class="font-medium text-gray-900">Certificación Institucional con Valor Curricular:</span> Avalada por el CETIS 29 y el subsistema DGETI, esta certificación es reconocida para el desarrollo profesional y el emprendimiento local.
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="flex-shrink-0 h-6 w-6 text-emerald-custom mt-1 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span class="font-medium text-gray-900">Emprendimiento y Microeconomía Sostenible:</span> Oportunidad real de crear microempresas de alimentos de alta calidad, satisfaciendo la demanda local de opciones saludables en San Pablo Chimalpa.
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="flex-shrink-0 h-6 w-6 text-emerald-custom mt-1 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span class="font-medium text-gray-900">Mejora Radical de la Salud Familiar:</span> Aplicación inmediata de conocimientos y recetas para prevenir y controlar padecimientos metabólicos, mejorando la calidad de vida de tu hogar a largo plazo.
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="flex-shrink-0 h-6 w-6 text-emerald-custom mt-1 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span class="font-medium text-gray-900">Acceso a Recursos y Red de Colaboración:</span> Conexión directa con el personal académico del CETIS 29 y una red de apoyo mutuo con otros miembros de la comunidad emprendedora.
+                        </li>
+                    </ul>
+                    <div class="mt-8">
+                        <button onclick="openModal('registerModal')" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl text-white bg-emerald-custom hover:bg-emerald-700 shadow-lg transition duration-300 transform hover:scale-[1.02]">
+                            Quiero ser parte del cambio
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-16 md:py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 text-white">
+                <div>
+                    <h2 class="text-base text-emerald-400 font-semibold tracking-wide uppercase">CONTACTO Y UBICACIÓN</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl">
+                        Preguntas y Registro
+                    </p>
+                    <p class="mt-4 text-lg text-gray-300">
+                        El taller se lleva a cabo en los laboratorios de alimentos del CETIS 29, que cumplen con todas las normativas de inocuidad y sanidad. Es un espacio diseñado específicamente para la capacitación práctica y el desarrollo de prototipos de alimentos seguros y nutritivos, utilizando equipo especializado.
+                    </p>
+                    <div class="mt-8 space-y-4">
+                        <p class="flex items-center text-lg">
+                            <svg class="flex-shrink-0 h-6 w-6 text-emerald-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            https://www.cetis-29.com
+                        </p>
+                        <p class="flex items-center text-lg">
+                            <svg class="flex-shrink-0 h-6 w-6 text-emerald-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                            +52 720 813 50 01
+                        </p>
+                        <p class="flex items-start text-lg">
+                            <svg class="flex-shrink-0 h-6 w-6 text-emerald-400 mr-3 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            Sede: CETIS 29, Av. San Pablo, San Pablo Chimalpa, Cuajimalpa, 05650 Ciudad de México, CDMX.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl overflow-hidden shadow-2xl h-72 lg:h-full">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15049.231265882582!2d-99.30335767598858!3d19.39498188151249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d207c72f1261d7%3A0xc6226065538e1462!2sSan%20Pablo%20Chimalpa%2C%20Cuajimalpa%20de%20Morelos%2C%2005650%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1678893946270!5m2!1ses-419!2smx" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Ubicación del CETIS 29 en San Pablo Chimalpa">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p>&copy; 2025 Taller de Capacitación Comunitaria. Proyecto de Vinculación CETIS 29, San Pablo Chimalpa.</p>
+            <p class="mt-2 text-sm">Innovación en Alimentos para la Salud de la Comunidad.</p>
+        </div>
+    </footer>
+
+    <div id="registerModal" class="fixed inset-0 bg-black bg-opacity-70 z-50 flex justify-center items-center hidden transition-opacity duration-300">
+        <div class="bg-white p-8 rounded-2xl shadow-2xl w-11/12 max-w-md transform transition-transform duration-300 scale-95" onclick="event.stopPropagation()">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-emerald-custom">Pre-Registro al Taller</h3>
+                <button onclick="closeModal('registerModal')" class="text-gray-400 hover:text-gray-700 transition duration-300">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+            </div>
+            
+            <p class="mb-4 text-gray-600">Completa este formulario para recibir el temario completo y las fechas de inicio. </p>
+            
+            <form id="registrationForm">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-700">Nombre Completo</label>
+                    <input type="text" id="name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:ring-emerald-custom focus:border-emerald-custom">
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Correo Electrónico</label>
+                    <input type="email" id="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-xl shadow-sm focus:ring-emerald-custom focus:border-emerald-custom">
+                </div>
+                
+                <button type="submit" class="w-full flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-xl text-white bg-emerald-custom hover:bg-emerald-700 transition duration-300">
+                    Enviar Solicitud
+                </button>
+                <p id="formMessage" class="mt-4 text-center text-sm font-medium text-red-500 hidden">
+                </p>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuButton = document.getElementById('menu-button');
+            
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                menuButton.querySelector('svg').classList.toggle('rotate-180'); 
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    if (!mobileMenu.classList.contains('hidden')) {
+                         mobileMenu.classList.add('hidden');
+                    }
+
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            const headers = document.querySelectorAll('.accordion-header');
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const targetId = header.getAttribute('data-target');
+                    const content = document.getElementById(targetId);
+                    const icon = header.querySelector('svg');
+
+                    const isHidden = content.classList.contains('hidden');
+
+                    document.querySelectorAll('.accordion-content').forEach(c => {
+                        c.classList.add('hidden');
+                    });
+                    document.querySelectorAll('.accordion-header svg').forEach(i => {
+                        i.classList.remove('rotate-180');
+                    });
+                    
+                    if (isHidden) {
+                        content.classList.remove('hidden');
+                        icon.classList.add('rotate-180');
+                    } else {
+                        content.classList.add('hidden');
+                        icon.classList.remove('rotate-180');
+                    }
+                });
+            });
+
+            const registrationForm = document.getElementById('registrationForm');
+            const formMessage = document.getElementById('formMessage');
+
+            registrationForm.addEventListener('submit', function(e) {
+                e.preventDefault(); 
+            
+                const name = document.getElementById('name').value;
+                formMessage.classList.remove('hidden', 'text-red-500'); 
+                formMessage.classList.add('text-emerald-custom'); 
+                
+                registrationForm.reset(); 
+                document.querySelector('#registrationForm button[type="submit"]').disabled = true;
+
+                setTimeout(() => {
+                    closeModal('registerModal');
+                    document.querySelector('#registrationForm button[type="submit"]').disabled = false; 
+                    formMessage.classList.add('hidden'); 
+                }, 3000);
+            });
+        });
+
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            setTimeout(() => modal.querySelector('div').classList.remove('scale-95'), 10);
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.querySelector('div').classList.add('scale-95');
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+
+        document.getElementById('registerModal')?.addEventListener('click', (e) => {
+            if (e.target.id === 'registerModal') {
+                closeModal('registerModal');
+            }
+        });
+    </script>
+</body>
+</html>
